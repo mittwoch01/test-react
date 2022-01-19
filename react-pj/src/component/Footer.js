@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   return (
     <div>
-      <header id="headBox">header영역</header>
+      <footer id="footBox">footer</footer>
     </div>
   )
 }
