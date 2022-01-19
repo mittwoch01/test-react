@@ -12,20 +12,16 @@ function Header() {
   },[myImg])
 
   return (
-      <header id="headBox" style={myImg }>
-
-        <h1><Link to="/"><img src={Logo} alt="사이트 이름" style={imgStyle} /></Link></h1>
-        <nav className="gnb" style={{ display:`flex`}}>
-          {/* 내부에서 경로를 처리하는 형태는 public */}
-            <NavLink to="/"><img src='img/succulent.png' alt='home' style={imgStyle} /></NavLink> 
-            {' | '}
-            <NavLink to="about">
-              <span style={{
-                display:'inline-block', width:'100px', height:'100px', border:'1px solid #777',
-                backgroundImage:'url("img/terrarium.png")', backgroundSize:'contain'
-              }}>about </span> </NavLink>
-          </nav>
-        </header>
+    <header id="headBox" style={{ display:'flex', justifyContent:'space-around'}}>
+      <h1><Link to="/"><img src={Logo} alt="사이트 이름" style={imgStyle} /></Link></h1>
+      <nav className="gnb">
+        {/* 내부에서 경로를 처리하는 형태는 public */}
+          <ul className='gnb'>
+            <li><NavLink to="/">home</NavLink> </li>
+            <li><NavLink to="about">about</NavLink></li>
+          </ul>
+        </nav>
+      </header>
   )
 }
 

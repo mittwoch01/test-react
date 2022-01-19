@@ -7,7 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 function RouterPage() {
   return (
     <Routes>
-      <Route path="home" element={<Home />}/>
+      <Route path="/" element={<Home />}/>
       <Route path="about" element={<About />}/>
       <Route path="/*" element={<PageError />}/>
     </Routes>
