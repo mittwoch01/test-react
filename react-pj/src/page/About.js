@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useState } from 'react';
 
 export default function About() {
@@ -25,7 +25,19 @@ export default function About() {
           <li key={idx}>
             {card.first_name+' '+card.last_name}
             <div className='link_btn'>
-              <button type='button'></button>
+
+              {/* <Link
+              to = {card.first_name}
+              onClick={(e)=>(
+                e.preventDefault()
+
+              )}>
+              {card.first_name}
+              </Link> */}
+              <button type='button'
+              onClick={ ()=> { nav(card.first_name) }}>
+              {card.first_name}
+              </button>
             </div>
           </li>
           )}
